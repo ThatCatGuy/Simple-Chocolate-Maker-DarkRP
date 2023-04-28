@@ -12,6 +12,12 @@ surface.CreateFont( "ChocMedium", {
     weight = 500,
 })
 
+surface.CreateFont( "ChocLarge", {
+    font = "Roboto",
+    size = 42,
+    weight = 500,
+})
+
 function ENT:Initialize()
 	self.Time = GetConVar( "simplechocolate_cookingtime" ):GetInt() or self.MaxTime
 end
@@ -56,7 +62,7 @@ function ENT:Draw()
     local w = 220
 		draw.RoundedBox(0,-160,-150,320,w,color_black)
 		if owner then
-			draw.SimpleTextOutlined(owner,"DWall",0,-150,color_white,TEXT_ALIGN_CENTER,0,2, color_black)
+			draw.SimpleTextOutlined(owner,"ChocLarge",0,-150,color_white,TEXT_ALIGN_CENTER,0,2, color_black)
 		end
 		draw.SimpleTextOutlined("Cocoa " .. Cocoa .. " / 4","ChocMedium",0,-100,(Cocoa == 4 and color_green ) or color_red,TEXT_ALIGN_CENTER,0,2,color_black)
 		draw.SimpleTextOutlined("Sugar " .. Sugar .. " / 12","ChocMedium",0,-70,(Sugar == 12 and color_green ) or color_red,TEXT_ALIGN_CENTER,0,2,color_black)
