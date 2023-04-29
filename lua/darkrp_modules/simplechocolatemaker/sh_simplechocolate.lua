@@ -1,5 +1,24 @@
 hook.Add("loadCustomDarkRPItems", "SimpleChocolate_Initialize", function()
 
+TEAM_CHOCOLATEMAKER = DarkRP.createJob("Chocolate Maker", {
+    color = Color(255, 255, 255, 255),
+    model = {
+        "models/player/Group03/Female_01.mdl",
+        "models/player/Group03/Female_02.mdl"
+    },
+    description = [[Create chocolate and sell it to Mr Wonka! But be aware: If someone kills you then you will loose all of your chocolate bars!]],
+    weapons = {},
+    command = "chocolatemaker",
+    max = 5,
+    salary = GAMEMODE.Config.normalsalary,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    category = "Other",
+})
+
+local allowedChocolate = {TEAM_CHOCOLATEMAKER}
+
 DarkRP.createCategory{
     name = "Simple Chocolate Maker",
     categorises = "entities",
@@ -15,7 +34,8 @@ DarkRP.createEntity("Milk", {
   price = 1000,
   max = 2,
   cmd = "buychocmilk",
-  category = "Simple Chocolate Maker"
+  category = "Simple Chocolate Maker",
+  allowed = allowedChocolate
 })
 
 DarkRP.createEntity("Cocoa", {
@@ -24,7 +44,8 @@ DarkRP.createEntity("Cocoa", {
   price = 1000,
   max = 2,
   cmd = "buychoccocoa",
-  category = "Simple Chocolate Maker"
+  category = "Simple Chocolate Maker",
+  allowed = allowedChocolate
 })
 
 DarkRP.createEntity("Sugar", {
@@ -33,7 +54,8 @@ DarkRP.createEntity("Sugar", {
   price = 1000,
   max = 2,
   cmd = "buychocsugar",
-  category = "Simple Chocolate Maker"
+  category = "Simple Chocolate Maker",
+  allowed = allowedChocolate
 })
 
 DarkRP.createEntity("Rum", {
@@ -42,7 +64,8 @@ DarkRP.createEntity("Rum", {
   price = 1000,
   max = 1,
   cmd = "buychocrum",
-  category = "Simple Chocolate Maker"
+  category = "Simple Chocolate Maker",
+  allowed = allowedChocolate
 })
 
 DarkRP.createEntity("Gas Canister", {
@@ -50,8 +73,9 @@ DarkRP.createEntity("Gas Canister", {
   model = "models/props_c17/canister01a.mdl",
   price = 1000,
   max = 1,
+  cmd = "buychocgas",
   category = "Simple Chocolate Maker",
-  cmd = "buychocgas"
+  allowed = allowedChocolate  
 })
 
 DarkRP.createEntity("Stove", {
@@ -60,7 +84,8 @@ DarkRP.createEntity("Stove", {
   price = 12000,
   max = 1,
   cmd = "buychocstove",
-  category = "Simple Chocolate Maker"
+  category = "Simple Chocolate Maker",
+  allowed = allowedChocolate
 })
 
 end)
