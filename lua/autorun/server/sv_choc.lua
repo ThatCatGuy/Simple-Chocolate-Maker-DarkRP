@@ -26,7 +26,7 @@ end
 CreateConVar( "simplechocolate_sellprice", 24000, FCVAR_SERVER_CAN_EXECUTE )
 CreateConVar( "simplechocolate_cookingtime", 240, FCVAR_SERVER_CAN_EXECUTE )
 CreateConVar( "simplechocolate_stovehealth", 200, FCVAR_SERVER_CAN_EXECUTE )
-CreateConVar( "simplechocolate_makewanted", 1, FCVAR_SERVER_CAN_EXECUTE )
+CreateConVar( "simplechocolate_makewanted", 0, FCVAR_SERVER_CAN_EXECUTE )
 
 local Sayings = {
 	"You got something for me?",
