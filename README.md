@@ -15,7 +15,7 @@ You can check you current chocolate you are holding by typing in the chat box ei
 
 ## NPC Config
 You can spawn the chocolate buyer from the Q menu.
-You can save the chocolate buyer(s) locations on the current map by using console command **simplechocolate_spawnnpc**.
+You can save the chocolate buyer(s) locations on the current map by using console command **simplechocolate_savenpc**.
 You can remove the chocolate buyer(s) locations on the current map by using console command **simplechocolat_removenpcs** this will prevent them spawning on the next restart..
 You can respawn the chocolate buyer(s) locations on the current map by using console command **simplechocolat_respawnnpcs** this is handy if you just saved them or updated the saves it will remove them from the map and reload from the file so if you move one by mistake then use the respawn command and it will fix its position.
 
